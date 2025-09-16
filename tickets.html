@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tickets — Event Manager</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-wrap">
+      <img src="assets/logo.png" alt="logo" class="logo" />
+      <span class="brand">Event Manager</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="users.html">Users</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="venues.html">Venues</a></li>
+      <li><a href="tickets.html" class="active">Tickets</a></li>
+      <li><a href="orders.html">Orders</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2>Tickets</h2>
+
+    <section class="panel">
+      <form id="ticket-form" class="form-grid">
+        <input type="hidden" id="ticket-id" />
+        <label>Event ID<input id="t_event_id" type="number" required /></label>
+        <label>User ID<input id="t_user_id" type="number" required /></label>
+        <label>Seat number<input id="t_seat_number" required /></label>
+        <label>Price<input id="t_price" type="number" min="0" required /></label>
+        <label>Type
+          <select id="t_ticket_type">
+            <option value="vip">VIP</option>
+            <option value="regular">Regular</option>
+            <option value="economy">Economy</option>
+          </select>
+        </label>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">Create ticket</button>
+          <button type="button" id="ticket-reset" class="btn btn-outline">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h3>Tickets list</h3>
+      <div id="tickets-list" class="list"></div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/tickets.js"></script>
+</body>
+</html>

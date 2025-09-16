@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Venues — Event Manager</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-wrap">
+      <img src="assets/logo.png" alt="logo" class="logo" />
+      <span class="brand">Event Manager</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="users.html">Users</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="venues.html" class="active">Venues</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="orders.html">Orders</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2>Venues</h2>
+
+    <section class="panel">
+      <form id="venue-form" class="form-grid">
+        <input type="hidden" id="venue-id" />
+        <label>Name<input id="v_name" required /></label>
+        <label>Address<input id="v_address" required /></label>
+        <label>Capacity<input id="v_capacity" type="number" min="0" /></label>
+        <div class="form-actions">
+          <button class="btn" type="submit">Save venue</button>
+          <button type="button" id="venue-reset" class="btn btn-outline">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h3>Venues list</h3>
+      <div id="venues-list" class="list"></div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/venues.js"></script>
+</body>
+</html>

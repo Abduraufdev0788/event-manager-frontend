@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Orders — Event Manager</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-wrap">
+      <img src="assets/logo.png" alt="logo" class="logo" />
+      <span class="brand">Event Manager</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="users.html">Users</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="venues.html">Venues</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="orders.html" class="active">Orders</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2>Orders</h2>
+
+    <section class="panel">
+      <form id="order-form" class="form-grid">
+        <input type="hidden" id="order-id" />
+        <label>Ticket ID<input id="o_ticket_id" type="number" required/></label>
+        <label>User ID<input id="o_user_id" type="number" required/></label>
+        <label>Quantity<input id="o_quantity" type="number" min="1" value="1" required/></label>
+        <div class="form-actions">
+          <button class="btn" type="submit">Create order</button>
+          <button type="button" id="order-reset" class="btn btn-outline">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h3>Orders list</h3>
+      <div id="orders-list" class="list"></div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/orders.js"></script>
+</body>
+</html>

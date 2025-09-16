@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Users — Event Manager</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-wrap">
+      <img src="assets/logo.png" alt="logo" class="logo" />
+      <span class="brand">Event Manager</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="users.html" class="active">Users</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="venues.html">Venues</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="orders.html">Orders</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2>Users</h2>
+
+    <section class="panel">
+      <form id="user-form" class="form-grid">
+        <input type="hidden" id="user-id" />
+        <label>Username<input id="username" required minlength="3" /></label>
+        <label>Email<input id="email" type="email" required /></label>
+        <label>Full name<input id="full_name" /></label>
+        <label>Password<input id="password" type="password" /></label>
+        <label>Type
+          <select id="user_type">
+            <option value="user">User</option>
+            <option value="organizer">Organizer</option>
+            <option value="admin">Admin</option>
+          </select>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn">Save</button>
+          <button type="button" id="reset-btn" class="btn btn-outline">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h3>All users</h3>
+      <div id="users-list" class="list"></div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/users.js"></script>
+</body>
+</html>

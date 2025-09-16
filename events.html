@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Events — Event Manager</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-wrap">
+      <img src="assets/logo.png" alt="logo" class="logo" />
+      <span class="brand">Event Manager</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="users.html">Users</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="venues.html">Venues</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="orders.html">Orders</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2>Events</h2>
+
+    <section class="panel">
+      <form id="event-form" class="form-grid">
+        <input type="hidden" id="event-id" />
+        <label>Title<input id="name" required minlength="3" /></label>
+        <label>Location<input id="location" required minlength="3" /></label>
+        <label>Date<input id="date" type="datetime-local" required /></label>
+        <label>Type
+          <select id="event_type">
+            <option value="concert">Concert</option>
+            <option value="conference">Conference</option>
+            <option value="workshop">Workshop</option>
+          </select>
+        </label>
+        <label>Description<textarea id="description" rows="3"></textarea></label>
+        <label>Organizer ID<input id="organizer_id" type="number" /></label>
+        <div class="form-actions">
+          <button type="submit" class="btn">Save event</button>
+          <button type="button" id="event-reset" class="btn btn-outline">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h3>Events list</h3>
+      <div id="events-list" class="list"></div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/events.js"></script>
+</body>
+</html>

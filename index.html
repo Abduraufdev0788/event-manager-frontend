@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Event Manager — Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-wrap">
+      <img src="assets/logo.png" alt="logo" class="logo" />
+      <span class="brand">Event Manager</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="users.html">Users</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="venues.html">Venues</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="orders.html">Orders</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>Manage your events like a pro</h1>
+      <p>Simple, fast and beautiful frontend for your Event Manager API.</p>
+      <div class="cta-row">
+        <a class="btn" href="events.html">View Events</a>
+        <a class="btn btn-outline" href="tickets.html">Buy Tickets</a>
+      </div>
+    </div>
+    <div class="hero-decor"></div>
+  </header>
+
+  <main class="container">
+    <section class="features">
+      <div class="card">
+        <h3>CRUD Ready</h3>
+        <p>Users, Events, Venues, Tickets and Orders — all pages ready to connect to your API.</p>
+      </div>
+      <div class="card">
+        <h3>Responsive</h3>
+        <p>Desktop and mobile friendly layout.</p>
+      </div>
+      <div class="card">
+        <h3>Lightweight</h3>
+        <p>Vanilla JS — no frameworks. Easy to integrate and customize.</p>
+      </div>
+    </section>
+
+    <section class="quick-start">
+      <h2>Quick start</h2>
+      <ol>
+        <li>Place this folder next to your backend or serve it with any static server.</li>
+        <li>Ensure backend runs at <code>http://127.0.0.1:8000</code> and CORS is enabled.</li>
+        <li>Open <code>index.html</code> in browser and navigate to pages.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Event Manager — Built with ♥</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
