@@ -4,7 +4,8 @@ const venueForm = document.getElementById("venue-form");
 
 async function fetchVenues() {
   try {
-    const res = await fetch(`${API_BASE}/venues/`);
+    console.log("Fetching venues...");
+    const res = await fetch(`${API_BASE}/venues/`, { method: "GET" });
     if (!res.ok) throw new Error("Failed to fetch venues");
     const data = await res.json();
     renderVenues(data);
@@ -48,8 +49,9 @@ venueForm?.addEventListener("submit", async (ev) => {
   const payload = {
     name: document.getElementById("v_name").value,
     address: document.getElementById("v_address").value,
-    capacity: Number(document.getElementById("v_capacity").value) || 0
+    venue_type: document.getElementById("v_capacity").value
   };
+  console.log("Submitting venue", id, payload);
   try {
     let res;
     if (id) {

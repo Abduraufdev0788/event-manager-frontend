@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // base URL of your FastAPI backend
-const API_BASE = "http://127.0.0.1:8000/events";
+const API_BASE = "http://127.0.0.1:8000";
 
 document.addEventListener("DOMContentLoaded", () => {
   // footer year
